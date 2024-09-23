@@ -57,7 +57,7 @@ jobs:
         # Minimum 1 day.
         # Maximum 90 days unless changed from the repository settings page.
         # Optional. Defaults to repository settings.
-        retention-days: 7
+        retention-days: 1
         # The level of compression for Zlib to be applied to the artifact archive.
         # The value can range from 0 to 9.
         # For large files that are not easily compressed, a value of 0 is recommended for significantly faster uploads.
