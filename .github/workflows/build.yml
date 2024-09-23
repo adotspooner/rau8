@@ -23,6 +23,14 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
 
+    - name: Create artifact folder
+      shell: bash
+      run: |
+        mkdir tmp
+        mkdir tmp/lib
+        cp -r include tmp/.
+        cp target/release/rau8.lib tmp/lib/.
+
     - name: Environment
       shell: bash
       run: |
@@ -37,7 +45,7 @@ jobs:
         # A file, directory or wildcard pattern that describes what to upload
         # Required.
         path: |
-          target\release\rau8.lib
+          tmp\
         # The desired behavior if no files are found using the provided path.
         # Available Options:
         #   warn: Output a warning but do not fail the action
